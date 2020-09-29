@@ -8,37 +8,50 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <script src='chromeapp_index.js' defer></script>
+  <script src="todo.js" defer></script>
+  <script src="jsclock.js" defer></script>
+  <script src="greeting.js" defer></script>
+  <script src="bg.js" defer></script>
+  <script src="weather.js" defer></script>
+  <script src="google_map.js" defer></script>
+  <script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHvn5aV5ffs7YzbhSvNueX53I4AdZW-Tw&callback=initMap">
+</script>
+  
 </head>
 <body>
 
-  <!-- clock -->
-<div class="js-clock">
-  <h1 class="js-title"></h1>
+<div class="contents_wrapper">
+    <!-- clock -->
+  <div class="js-clock">
+    <h1 class="js-title"></h1>
+  </div>
+
+  <!-- form -->
+  <form class="js-form form">
+    <input type="text" placeholder="what is your name?">
+  </form>
+
+  <!-- greetings sign -->
+  <h4 class="js-greeting greeting"></h4>
+
+  <!-- todoform -->
+  <form class="toDoForm">
+    <input type="text" placeholder="what's your plan?">
+  </form>
+
+  <!-- todolist -->
+  <ul class="toDoList">
+  </ul>
+
+  <!-- weather -->
+  <span class="js-weather"></span>
+
+  <!-- google map -->
+  <div class="google_map" id="map">
+  </div>
+
 </div>
 
-<!-- form -->
-<form class="js-form form">
-  <input type="text" placeholder="what is your name?">
-</form>
-
-<!-- greetings sign -->
-<h4 class="js-greeting greeting"></h4>
-
-<!-- todoform -->
-<form class="toDoForm">
-  <input type="text" placeholder="write a to do">
-</form>
-
-<ul class="toDoList">
-  
-</ul>
-
-<span class="js-weather"></span>
-
-<script src="todo.js"></script>
-<script src="jsclock.js"></script>
-<script src="greeting.js"></script>
-<script src="bg.js"></script>
-<script src="weather.js"></script>
 </body>
 </html>

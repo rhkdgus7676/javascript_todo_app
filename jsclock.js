@@ -6,14 +6,26 @@ const clockTitle = clockContainer.querySelector(".js-title");
 
 function getTime(){
   const date = new Date();
-  const days = date.getDay();
-  const dates = date.getDate();
+
+  const weekdayArray = new Array(7);
+    weekdayArray[0] = "sunday";
+    weekdayArray[1] = "monday";
+    weekdayArray[2] = "tuesday";
+    weekdayArray[3] = "wednesday";
+    weekdayArray[4] = "thirsday";
+    weekdayArray[5] = "friday";
+    weekdayArray[6] = "saturday";
+
+  const weekdays = weekdayArray[date.getDay()];
+
+  // const dates = date.getDate();
   const hours = date.getHours();
   const mins = date.getMinutes();
   const secs = date.getSeconds();
 
-  clockTitle.innerText = 
-  `${dates}일 ${hours < 10 ? `0${hours}` : hours}시 ${mins < 10 ? `0${mins}` : mins}분   ${secs < 10 ? `0${secs}` : secs}초`;
+  clockTitle.innerText =
+  // ${dates < 10 ? `0${dates}` : dates} th 
+  `${weekdays} , ${hours < 10 ? `0${hours}` : hours} : ${mins < 10 ? `0${mins}` : mins} : ${secs < 10 ? `0${secs}` : secs}`;
 }
 
 

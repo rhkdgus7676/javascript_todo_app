@@ -7,13 +7,6 @@ const greeting = document.querySelector(".js-greeting");
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
 
-//
-// function submitName(value){
-//   localStorage.setItem(value);
-// }
-
-// form.addEventListener("submit" , submitName(value))
-//
 
 function saveName(text){
     localStorage.setItem(USER_LS , text);

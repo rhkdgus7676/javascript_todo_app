@@ -47,7 +47,7 @@ function paintToDo(text){
  const delBtn = document.createElement("button");
  const span = document.createElement("span");
  const newId =  toDos.length + 1;
- delBtn.innerText = "Delete";
+ delBtn.innerText = "delete";
 delBtn.addEventListener("click" , deleteToDo);
  span.innerText = text;
  li.appendChild(span);
@@ -67,6 +67,7 @@ delBtn.addEventListener("click" , deleteToDo);
 function init(){
   loadToDos();
   toDoForm.addEventListener("submit" , handleSubmit);
+  // setTimeout(loadToDos, 1000);
   
 }
 init();

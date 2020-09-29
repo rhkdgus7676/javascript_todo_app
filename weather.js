@@ -23,7 +23,7 @@ function saveCoords(coordsObj){
 }
 
 function handleGeoSuccess(position){
-  console.log(position);
+  // console.log(position);
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   const coordsObj = {
@@ -37,7 +37,7 @@ function handleGeoSuccess(position){
 }
 
 function handleGeoError(){
-  console.log("cant access geo ")
+  console.log("can't access geo location")
 }
 
 
@@ -52,7 +52,7 @@ function loadCoords(){
   }else{
     //getweather
     const parsedCoords = JSON.parse(loadedCoords);
-    console.log(parsedCoords);
+    // console.log(parsedCoords);
     getWeather(parsedCoords.latitude , parsedCoords.longitude);
   }
 }
